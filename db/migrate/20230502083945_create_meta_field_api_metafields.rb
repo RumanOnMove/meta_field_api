@@ -5,8 +5,7 @@ class CreateMetaFieldApiMetafields < ActiveRecord::Migration[7.0]
       t.string :key
       t.text :value
       t.text :description
-      t.integer :owner_id
-      t.string :owner_type
+      t.references :owner, polymorphic: true
 
       t.timestamps
     end
