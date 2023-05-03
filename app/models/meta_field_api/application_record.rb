@@ -1,5 +1,3 @@
-module MetaFieldApi
-  class ApplicationRecord < ActiveRecord::Base
-    self.abstract_class = true
-  end
+module UserExtension
+  extend ActiveSupport::Concern
 end

@@ -2,5 +2,5 @@ require "meta_field_api/version"
 require "meta_field_api/engine"
 
 module MetaFieldApi
-  # Your code goes here...
+  # Require the meta field support file
 end
