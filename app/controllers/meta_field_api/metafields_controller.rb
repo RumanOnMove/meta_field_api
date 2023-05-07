@@ -1,9 +1,12 @@
 module MetaFieldApi
   class MetafieldsController < ApplicationController
+    # List of all metafields
     def index
       metafields = Metafield.all
       render json: metafields, status: :ok
     end
+
+    # Store metafields
     def create
       metafield = Metafield.new(metafield_params)
       if metafield.save
@@ -13,10 +16,12 @@ module MetaFieldApi
       end
     end
 
+    # Show single metafield
     def show
       #
     end
 
+    # Updating met
     def update
       #
     end
@@ -28,7 +33,7 @@ module MetaFieldApi
     private
 
     def metafield_params
-      params.permit(:namespace, :key, :value, :description, :owner_type, :owner_id)
+      params.permit(:namespace, :key, :value, :description, :my_type, :owner_type, :owner_id)
     end
   end
 end
