@@ -2,7 +2,13 @@ module MetaFieldApi
   class MetafieldsController < ApplicationController
     # List of all metafields
     def index
-      metafields = Metafield.all
+      # Get the filter parameters from the params hash
+      owner_type = params[:owner_type].presence
+      owner_id = params[:owner_id].presence
+      key = params[:key].presence
+      namespace = params[:namespace].presence
+
+      metafields = Metafield.filter_by(owner_type, owner_id, key, namespace)
       render json: { metafields: metafields, message: 'Metafields retrieved successfully!' }, status: :ok
     end
 

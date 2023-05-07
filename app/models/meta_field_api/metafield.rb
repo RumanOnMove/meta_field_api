@@ -24,5 +24,15 @@ module MetaFieldApi
     def my_type=(value)
       write_attribute(:type, value)
     end
+
+    # Scope
+    scope :filter_by, -> (owner_type = nil, owner_id = nil, key = nil, namespace = nil) do
+      filter_params = {}
+      filter_params[:owner_type] = owner_type if owner_type.present?
+      filter_params[:owner_id] = owner_id if owner_id.present?
+      filter_params[:key] = key if key.present?
+      filter_params[:namespace] = namespace if namespace.present?
+      where(filter_params)
+    end
   end
 end
