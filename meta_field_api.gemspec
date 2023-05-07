@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors     = ["RumanOnMove"]
   spec.email       = ["oruman@moveon.com.bd"]
   spec.summary     = "A Rails engine for managing meta fields"
-  spec.description = "his Rails engine provides APIs for managing meta fields through a RESTful interface. It includes a migration for creating the necessary database table and a controller with methods for index, show, create, update, and delete."
-    spec.license     = "MIT"
+  spec.description = "This Rails engine provides APIs for managing meta fields through a RESTful interface. It includes a migration for creating the necessary database table and a controller with methods for index, show, create, update, and delete."
+  spec.license     = "MIT"
   
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
